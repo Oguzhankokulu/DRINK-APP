@@ -210,7 +210,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const SizedBox(height: 150),
+            const SizedBox(height: 250),
             Text(
               filteredQuestions[currentQuestionIndex]['question'],
               style: GoogleFonts.ubuntu(
