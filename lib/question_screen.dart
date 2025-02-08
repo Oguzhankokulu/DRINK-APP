@@ -19,42 +19,139 @@ class _QuestionScreenState extends State<QuestionScreen> {
     {
       'question': 'Do you want a cold or hot drink?',
       'options': [
-        {'text': 'Cold', 'image': 'assets/images/cold_drink.png', 'value': 'cold'},
-        {'text': 'Hot', 'image': 'assets/images/hot_drink.png', 'value': 'hot'},
+        {'text': 'Cold', 'image': 'assets/images/ice-cubes.png', 'value': 'cold'},
+        {'text': 'Hot', 'image': 'assets/images/hot.png', 'value': 'hot'},
       ],
       'condition': null, // No condition for the first question
     },
     {
-      'question': 'Do you want tea or coffee?',
+      'question': 'Do you want a Coffee?',
       'options': [
-        {'text': 'Tea', 'image': 'assets/images/tea.png', 'value': 'tea'},
-        {'text': 'Coffee', 'image': 'assets/images/coffee.png', 'value': 'coffee'},
+        {'text': 'YES', 'image': 'assets/images/yes.png', 'value': 'coffee'},
+        {'text': 'NO', 'image': 'assets/images/no.png', 'value': 'not-coffee'},
       ],
-      'condition': 'hot', // Show this question only if the answer is 'hot'
+      'condition': ['hot'], // Show this question only if the answer is 'hot'
     },
     {
-      'question': 'Do you want a fruity or a creamy cold drink?',
+      'question': 'Do you want a sweet drink?',
       'options': [
-        {'text': 'Fruity', 'image': 'assets/images/fruity.png', 'value': 'fruity'},
-        {'text': 'Creamy', 'image': 'assets/images/creamy.png', 'value': 'creamy'},
+        {'text': 'YES', 'image': 'assets/images/yes.png', 'value': 'sweet'},
+        {'text': 'NO', 'image': 'assets/images/no.png', 'value': 'not-sweet'},
       ],
-      'condition': 'cold', // Show this question only if the answer is 'cold'
+      'condition': null,
+    },
+    {
+      'question': 'Do you want chocolate or caramel in your drink? (other flavors aren\'t eliminated)',
+      'options': [
+        {'text': 'Chocolate', 'image': 'assets/images/chocolate.png', 'value': 'non-caramel'},
+        {'text': 'Caramel', 'image': 'assets/images/caramel.png', 'value': 'non-chocolate'},
+      ],
+      'condition': ['hot','coffee','sweet'], 
+    },
+    {
+      'question': 'Do you want milk in your drink?',
+      'options': [
+        {'text': 'YES', 'image': 'assets/images/milk.png', 'value': 'milk'},
+        {'text': 'NO', 'image': 'assets/images/glass-bottle.png', 'value': 'no-milk'},
+      ],
+      'condition': ['hot','not-coffee','sweet'],
+    },
+    {
+      'question': 'Do you want milk in your drink?',
+      'options': [
+        {'text': 'YES', 'image': 'assets/images/milk.png', 'value': 'milk'},
+        {'text': 'NO', 'image': 'assets/images/glass-bottle.png', 'value': 'no-milk'},
+      ],
+      'condition': ['hot','coffee','not-sweet'],
+    },
+    {
+      'question': 'Do you want a strong or a light drink?',
+      'options': [
+        {'text': 'Strong', 'image': 'assets/images/strong.png', 'value': 'strong'},
+        {'text': 'Light', 'image': 'assets/images/soft.png', 'value': 'soft'},
+      ],
+      'condition': ['hot','coffee','not-sweet'],
+    },
+    {
+      'question': 'Do you want aromatic drink?',
+      'options': [
+        {'text': 'YES', 'image': 'assets/images/yes.png', 'value': 'aromatic'},
+        {'text': 'NO', 'image': 'assets/images/no.png', 'value': 'not-aromatic'},
+      ],
+      'condition': ['hot','not-coffee','not-sweet'],
+    },
+    {
+      'question': 'Do you want coffee in your drink?',
+      'options': [
+        {'text': 'YES', 'image': 'assets/images/yes.png', 'value': 'coffee'},
+        {'text': 'NO', 'image': 'assets/images/no.png', 'value': 'not-coffee'},
+      ],
+      'condition': ['cold','not-sweet'], // Show this question only if the answer is 'cold' and 'sweet'
+    },
+    {
+      'question': 'Do you want milk in your drink?',
+      'options': [
+        {'text': 'YES', 'image': 'assets/images/milk.png', 'value': 'milk'},
+        {'text': 'NO', 'image': 'assets/images/glass-bottle.png', 'value': 'no-milk'},
+      ],
+      'condition': ['cold','not-sweet','coffee'], // Show this question only if the answer is 'cold' and 'sweet'
+    },
+    {
+      'question': 'Do you want creamy or fruity drink?',
+      'options': [
+        {'text': 'Creamy', 'image': 'assets/images/creamy.png', 'value': 'creamy'},
+        {'text': 'Fruity', 'image': 'assets/images/fruity.png', 'value': 'fruity'},
+      ],
+      'condition': ['cold','sweet'], // Show this question only if the answer is 'fruity'
+    },
+    {
+      'question': 'Do you want soda or juice?',
+      'options': [
+        {'text': 'Soda', 'image': 'assets/images/soda.png', 'value': 'soda'},
+        {'text': 'Juice', 'image': 'assets/images/juice.png', 'value': 'juice'},
+      ],
+      'condition': ['cold','sweet','fruity'], // Show this question only if the answer is 'cold' and 'sweet'
+    },
+    {
+      'question': 'Do you want coffee in your drink?',
+      'options': [
+        {'text': 'YES', 'image': 'assets/images/yes.png', 'value': 'coffee'},
+        {'text': 'NO', 'image': 'assets/images/no.png', 'value': 'not-coffee'},
+      ],
+      'condition': ['cold','sweet','creamy'], // Show this question only if the answer is 'creamy'
+    },
+    {
+      'question': 'Do you want chocolate or caramel in your drink? (other flavors aren\'t eliminated)',
+      'options': [
+        {'text': 'Chocolate', 'image': 'assets/images/chocolate.png', 'value': 'non-caramel'},
+        {'text': 'Caramel', 'image': 'assets/images/caramel.png', 'value': 'non-chocolate'},
+      ],
+      'condition': ['cold','sweet','creamy','coffee'],
     },
   ];
 
-  // Filter the questions based on the user's previous answers
-  List<Map<String, dynamic>> getFilteredQuestions() {
-    List<Map<String, dynamic>> filteredQuestions = [];
-    
-    for (var question in questions) {
-      // If the question has no condition or the condition matches the user's answer
-      if (question['condition'] == null || answers.contains(question['condition'])) {
+ List<Map<String, dynamic>> getFilteredQuestions() {
+  List<Map<String, dynamic>> filteredQuestions = [];
+  
+  for (var question in questions) {
+    // If the question has no condition, always include it
+    if (question['condition'] == null) {
+      filteredQuestions.add(question);
+    } else {
+      List<String> conditionList = List<String>.from(question['condition']);
+      
+      // Check if all conditions are met (AND logic)
+      bool allConditionsMet = conditionList.every((condition) => answers.contains(condition));
+      
+      if (allConditionsMet) {
         filteredQuestions.add(question);
       }
     }
-    
-    return filteredQuestions;
   }
+  
+  return filteredQuestions;
+}
+
 
   // Move to the next question
   void nextQuestion(String answer) {
