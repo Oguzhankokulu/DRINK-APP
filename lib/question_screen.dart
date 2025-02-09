@@ -4,6 +4,8 @@ import 'result_screen.dart';
 import 'main.dart'; // Import the main.dart file to navigate back to the home screen
 
 class QuestionScreen extends StatefulWidget {
+  const QuestionScreen({super.key});
+
   @override
   _QuestionScreenState createState() => _QuestionScreenState();
 }

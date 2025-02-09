@@ -39,7 +39,7 @@ class IntroductionScreenPage extends StatelessWidget {
     ),
     PageViewModel(
       title: "Get Started",
-      body: "Get started with our app now! Find what to drink!",
+      body: "Get started with our app now! Find what to drink over 40 drinks!",
       image: Image.asset("assets/images/start.png",
       width: 200,  // Specify the width
       height: 200, // Specify the height

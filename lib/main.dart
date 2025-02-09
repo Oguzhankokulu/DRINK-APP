@@ -78,7 +78,6 @@ class HomeScreen extends StatelessWidget {
                     },
                     style: ElevatedButton.styleFrom(
                       padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
-                      fixedSize: Size(225, 65),
                       elevation: 15.0,
                       shadowColor: Colors.indigo,
                       side: BorderSide(color: const Color.fromARGB(255, 28, 13, 236), width: 5.0),
