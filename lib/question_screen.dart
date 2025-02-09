@@ -43,7 +43,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
       'condition': null,
     },
     {
-      'question': 'Do you want chocolate or caramel in your drink? (other flavors aren\'t eliminated)',
+      'question': 'Do you want chocolate or caramel in your drink? (others aren\'t eliminated)',
       'options': [
         {'text': 'Chocolate', 'image': 'assets/images/chocolate.png', 'value': 'non-caramel'},
         {'text': 'Caramel', 'image': 'assets/images/caramel.png', 'value': 'non-chocolate'},
@@ -123,7 +123,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
       'condition': ['cold','sweet','creamy'], // Show this question only if the answer is 'creamy'
     },
     {
-      'question': 'Do you want chocolate or caramel in your drink? (other flavors aren\'t eliminated)',
+      'question': 'Do you want chocolate or caramel in your drink? (others aren\'t eliminated)',
       'options': [
         {'text': 'Chocolate', 'image': 'assets/images/chocolate.png', 'value': 'non-caramel'},
         {'text': 'Caramel', 'image': 'assets/images/caramel.png', 'value': 'non-chocolate'},
@@ -212,7 +212,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const SizedBox(height: 250),
+            const SizedBox(height: 230),
             Text(
               filteredQuestions[currentQuestionIndex]['question'],
               style: GoogleFonts.ubuntu(
