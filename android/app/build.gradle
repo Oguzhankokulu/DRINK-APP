@@ -38,5 +38,3 @@ flutter {
     source = "../.."
 }
 
-// Apply the plugin here
-apply plugin: 'com.google.gms.google-services'
